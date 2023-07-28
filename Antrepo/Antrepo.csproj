@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3AB35E7A-7A12-447B-A323-2B9BCEF42A24}</ProjectGuid>
+    <ProjectGuid>{182B7F8D-EEC2-4609-9A34-42779D8CDC27}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Antrepo</RootNamespace>
     <AssemblyName>Antrepo</AssemblyName>
@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +64,526 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CikisFisiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CikisFisiEkle.Designer.cs">
+      <DependentUpon>CikisFisiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CikisFisiGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CikisFisiGuncelle.Designer.cs">
+      <DependentUpon>CikisFisiGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CikisFisiRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CikisFisiRaporForm.Designer.cs">
+      <DependentUpon>CikisFisiRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CikisFisiSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CikisFisiSil.Designer.cs">
+      <DependentUpon>CikisFisiSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="db_usersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_usersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElektronikEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElektronikEkle.Designer.cs">
+      <DependentUpon>ElektronikEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElektronikGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElektronikGuncelle.Designer.cs">
+      <DependentUpon>ElektronikGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElektronikKayıtSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElektronikKayıtSil.Designer.cs">
+      <DependentUpon>ElektronikKayıtSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElektronikRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElektronikRaporForm.Designer.cs">
+      <DependentUpon>ElektronikRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElektronikTürRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElektronikTürRaporForm.Designer.cs">
+      <DependentUpon>ElektronikTürRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fatura.Designer.cs">
+      <DependentUpon>Fatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaturaGuncelle.Designer.cs">
+      <DependentUpon>FaturaGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaturaRaporForm.Designer.cs">
+      <DependentUpon>FaturaRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaturaSil.Designer.cs">
+      <DependentUpon>FaturaSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GirisFisiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisFisiEkle.Designer.cs">
+      <DependentUpon>GirisFisiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisFisiGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisFisiGuncelle.Designer.cs">
+      <DependentUpon>GirisFisiGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisFisiSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisFisiSil.Designer.cs">
+      <DependentUpon>GirisFisiSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirişEkranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirişEkranı.Designer.cs">
+      <DependentUpon>GirişEkranı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirişFişiRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirişFişiRaporForm.Designer.cs">
+      <DependentUpon>GirişFişiRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GıdaAdetRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GıdaAdetRaporForm.Designer.cs">
+      <DependentUpon>GıdaAdetRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GıdaBirimEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GıdaBirimEkle.Designer.cs">
+      <DependentUpon>GıdaBirimEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GıdaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GıdaEkle.Designer.cs">
+      <DependentUpon>GıdaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GıdaGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GıdaGüncelle.Designer.cs">
+      <DependentUpon>GıdaGüncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GıdaKayıtSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GıdaKayıtSil.Designer.cs">
+      <DependentUpon>GıdaKayıtSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GıdaRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GıdaRaporForm.Designer.cs">
+      <DependentUpon>GıdaRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HavaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HavaEkle.Designer.cs">
+      <DependentUpon>HavaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HavaGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HavaGuncelle.Designer.cs">
+      <DependentUpon>HavaGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HavaSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HavaSil.Designer.cs">
+      <DependentUpon>HavaSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HavaTasitRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HavaTasitRaporForm.Designer.cs">
+      <DependentUpon>HavaTasitRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobilyaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobilyaEkle.Designer.cs">
+      <DependentUpon>MobilyaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobilyaGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobilyaGuncelle.Designer.cs">
+      <DependentUpon>MobilyaGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobilyaKayıtSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobilyaKayıtSil.Designer.cs">
+      <DependentUpon>MobilyaKayıtSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobilyaMarkaRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobilyaMarkaRaporForm.Designer.cs">
+      <DependentUpon>MobilyaMarkaRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobilyaRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobilyaRaporForm.Designer.cs">
+      <DependentUpon>MobilyaRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel.Designer.cs">
+      <DependentUpon>Personel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelBirimRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelBirimRaporForm.Designer.cs">
+      <DependentUpon>PersonelBirimRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelEkle.Designer.cs">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGuncelle.Designer.cs">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelRaporForm.Designer.cs">
+      <DependentUpon>PersonelRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelSil.Designer.cs">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sevkiyatİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sevkiyatİslemleri.Designer.cs">
+      <DependentUpon>Sevkiyatİslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Siparisİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Siparisİslemleri.Designer.cs">
+      <DependentUpon>Siparisİslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Stoklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stoklar.Designer.cs">
+      <DependentUpon>Stoklar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanımlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanımlama.Designer.cs">
+      <DependentUpon>Tanımlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TasitGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasitGuncelle.Designer.cs">
+      <DependentUpon>TasitGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TasitMarkaRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasitMarkaRaporForm.Designer.cs">
+      <DependentUpon>TasitMarkaRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TasitRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasitRaporForm.Designer.cs">
+      <DependentUpon>TasitRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TasitSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasitSil.Designer.cs">
+      <DependentUpon>TasitSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taşıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taşıt.Designer.cs">
+      <DependentUpon>Taşıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaşıtEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaşıtEkle.Designer.cs">
+      <DependentUpon>TaşıtEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UyeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeEkle.Designer.cs">
+      <DependentUpon>UyeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UyeGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeGuncelle.Designer.cs">
+      <DependentUpon>UyeGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UyeRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeRaporForm.Designer.cs">
+      <DependentUpon>UyeRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UyeSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeSil.Designer.cs">
+      <DependentUpon>UyeSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YurtdisiRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YurtdisiRaporForm.Designer.cs">
+      <DependentUpon>YurtdisiRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YurtDışıSevkiyatEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YurtDışıSevkiyatEkle.Designer.cs">
+      <DependentUpon>YurtDışıSevkiyatEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YurtdışıSevkiyatGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YurtdışıSevkiyatGüncelle.Designer.cs">
+      <DependentUpon>YurtdışıSevkiyatGüncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YurtdışıSevkiyatSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YurtdışıSevkiyatSil.Designer.cs">
+      <DependentUpon>YurtdışıSevkiyatSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YurticiRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YurticiRaporForm.Designer.cs">
+      <DependentUpon>YurticiRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YurtiçiSevkiyatEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YurtiçiSevkiyatEkle.Designer.cs">
+      <DependentUpon>YurtiçiSevkiyatEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YurtiçiSevkiyatGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YurtiçiSevkiyatGuncelle.Designer.cs">
+      <DependentUpon>YurtiçiSevkiyatGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YurtiçiSevkiyatSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YurtiçiSevkiyatSil.Designer.cs">
+      <DependentUpon>YurtiçiSevkiyatSil.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CikisFisi.rdlc" />
+    <EmbeddedResource Include="CikisFisiEkle.resx">
+      <DependentUpon>CikisFisiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CikisFisiGuncelle.resx">
+      <DependentUpon>CikisFisiGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CikisFisiRaporForm.resx">
+      <DependentUpon>CikisFisiRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CikisFisiSil.resx">
+      <DependentUpon>CikisFisiSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elektronik.rdlc" />
+    <EmbeddedResource Include="ElektronikEkle.resx">
+      <DependentUpon>ElektronikEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElektronikGuncelle.resx">
+      <DependentUpon>ElektronikGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElektronikKayıtSil.resx">
+      <DependentUpon>ElektronikKayıtSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElektronikRaporForm.resx">
+      <DependentUpon>ElektronikRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElektronikTürRapor.rdlc" />
+    <EmbeddedResource Include="ElektronikTürRaporForm.resx">
+      <DependentUpon>ElektronikTürRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura.rdlc" />
+    <EmbeddedResource Include="Fatura.resx">
+      <DependentUpon>Fatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaturaGuncelle.resx">
+      <DependentUpon>FaturaGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaturaRaporForm.resx">
+      <DependentUpon>FaturaRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaturaSil.resx">
+      <DependentUpon>FaturaSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisFisi.rdlc" />
+    <EmbeddedResource Include="GirisFisiEkle.resx">
+      <DependentUpon>GirisFisiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisFisiGuncelle.resx">
+      <DependentUpon>GirisFisiGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisFisiSil.resx">
+      <DependentUpon>GirisFisiSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirişEkranı.resx">
+      <DependentUpon>GirişEkranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirişFişiRaporForm.resx">
+      <DependentUpon>GirişFişiRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GıdaAdetRapor.rdlc" />
+    <EmbeddedResource Include="GıdaAdetRaporForm.resx">
+      <DependentUpon>GıdaAdetRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GıdaBirimEkle.resx">
+      <DependentUpon>GıdaBirimEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GıdaEkle.resx">
+      <DependentUpon>GıdaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GıdaGüncelle.resx">
+      <DependentUpon>GıdaGüncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GıdaKayıtSil.resx">
+      <DependentUpon>GıdaKayıtSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GıdaRaporForm.resx">
+      <DependentUpon>GıdaRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HavaEkle.resx">
+      <DependentUpon>HavaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HavaGuncelle.resx">
+      <DependentUpon>HavaGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HavaSil.resx">
+      <DependentUpon>HavaSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HavaTasit.rdlc" />
+    <EmbeddedResource Include="HavaTasitRaporForm.resx">
+      <DependentUpon>HavaTasitRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobilya.rdlc" />
+    <EmbeddedResource Include="MobilyaEkle.resx">
+      <DependentUpon>MobilyaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobilyaGuncelle.resx">
+      <DependentUpon>MobilyaGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobilyaKayıtSil.resx">
+      <DependentUpon>MobilyaKayıtSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobilyaMarkaRapor.rdlc" />
+    <EmbeddedResource Include="MobilyaMarkaRaporForm.resx">
+      <DependentUpon>MobilyaMarkaRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobilyaRaporForm.resx">
+      <DependentUpon>MobilyaRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel.rdlc" />
+    <EmbeddedResource Include="Personel.resx">
+      <DependentUpon>Personel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelBirim.rdlc" />
+    <EmbeddedResource Include="PersonelBirimRaporForm.resx">
+      <DependentUpon>PersonelBirimRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelEkle.resx">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGuncelle.resx">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelRaporForm.resx">
+      <DependentUpon>PersonelRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelSil.resx">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +593,90 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Sevkiyatİslemleri.resx">
+      <DependentUpon>Sevkiyatİslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Siparisİslemleri.resx">
+      <DependentUpon>Siparisİslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stoklar.resx">
+      <DependentUpon>Stoklar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanımlama.resx">
+      <DependentUpon>Tanımlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasit.rdlc" />
+    <EmbeddedResource Include="TasitGuncelle.resx">
+      <DependentUpon>TasitGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasitMarkaRaporForm.resx">
+      <DependentUpon>TasitMarkaRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasitRaporForm.resx">
+      <DependentUpon>TasitRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasitSil.resx">
+      <DependentUpon>TasitSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaşitMarkaRapor.rdlc" />
+    <EmbeddedResource Include="Taşıt.resx">
+      <DependentUpon>Taşıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaşıtEkle.resx">
+      <DependentUpon>TaşıtEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyeEkle.resx">
+      <DependentUpon>UyeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyeGuncelle.resx">
+      <DependentUpon>UyeGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyeRaporForm.resx">
+      <DependentUpon>UyeRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyeSil.resx">
+      <DependentUpon>UyeSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yurtdisi.rdlc" />
+    <EmbeddedResource Include="YurtdisiRaporForm.resx">
+      <DependentUpon>YurtdisiRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YurtDışıSevkiyatEkle.resx">
+      <DependentUpon>YurtDışıSevkiyatEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YurtdışıSevkiyatGüncelle.resx">
+      <DependentUpon>YurtdışıSevkiyatGüncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YurtdışıSevkiyatSil.resx">
+      <DependentUpon>YurtdışıSevkiyatSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YurticiRaporForm.resx">
+      <DependentUpon>YurticiRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YurtiçiSevkiyatEkle.resx">
+      <DependentUpon>YurtiçiSevkiyatEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YurtiçiSevkiyatGuncelle.resx">
+      <DependentUpon>YurtiçiSevkiyatGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YurtiçiSevkiyatSil.resx">
+      <DependentUpon>YurtiçiSevkiyatSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yurtİci.rdlc" />
+    <None Include="db_usersDataSet.xsc">
+      <DependentUpon>db_usersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_usersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_usersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_usersDataSet.xss">
+      <DependentUpon>db_usersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +689,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db_users.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
