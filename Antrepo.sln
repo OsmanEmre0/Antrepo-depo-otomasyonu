@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33328.57
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antrepo", "Antrepo\Antrepo.csproj", "{3AB35E7A-7A12-447B-A323-2B9BCEF42A24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antrepo", "Antrepo\Antrepo.csproj", "{182B7F8D-EEC2-4609-9A34-42779D8CDC27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3AB35E7A-7A12-447B-A323-2B9BCEF42A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AB35E7A-7A12-447B-A323-2B9BCEF42A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AB35E7A-7A12-447B-A323-2B9BCEF42A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AB35E7A-7A12-447B-A323-2B9BCEF42A24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{182B7F8D-EEC2-4609-9A34-42779D8CDC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{182B7F8D-EEC2-4609-9A34-42779D8CDC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{182B7F8D-EEC2-4609-9A34-42779D8CDC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{182B7F8D-EEC2-4609-9A34-42779D8CDC27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {94EF460C-BDA1-465A-B0A3-EB65CA6B8B00}
+		SolutionGuid = {A8870379-E2E6-4812-929F-EA034A8E06F5}
 	EndGlobalSection
 EndGlobal
